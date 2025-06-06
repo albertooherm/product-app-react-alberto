@@ -1,0 +1,19 @@
+export default function FormTextarea({
+    label,
+    register,
+    name,
+    validation,
+    error,
+  }) {
+    return (
+      <div>
+        <label className="block text-sm font-medium text-gray-700">{label}</label>
+        <textarea
+          rows={4}
+          className="mt-1 w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+          {...register(name, validation)}
+        />
+        {error && <p className="text-sm text-red-500">{error.message}</p>}
+      </div>
+    );
+  }  
