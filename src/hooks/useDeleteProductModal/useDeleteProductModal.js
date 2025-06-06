@@ -23,7 +23,7 @@ export default function useDeleteProductModal() {
 
   const confirmDelete = async () => {
     await deleteProductById(productToDelete);
-    toast.error(STRINGS.APP.DELETE_SUCCESS);
+    toast.success(STRINGS.APP.DELETE_SUCCESS);
     closeModal();
   };
 
