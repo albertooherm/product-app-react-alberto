@@ -1,12 +1,55 @@
-# React + Vite
+# Aplicación de Gestión de Productos
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Desarrollador
+**Alberto Maximiliano Hermosillo Sandoval**
 
-Currently, two official plugins are available:
+## Descripción del Proyecto
+Esta es una aplicación web desarrollada con **React + Vite** que permite realizar operaciones CRUD (Crear, Leer, Actualizar y Eliminar) sobre una lista de productos obtenidos desde una API pública. La interfaz es completamente responsiva y está estructurada utilizando buenas prácticas de componentes reutilizables y estado global con Zustand.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Instalación y Ejecución Local
 
-## Expanding the ESLint configuration
+1. Clona el repositorio:
+```bash
+git clone https://github.com/albertooherm/product-app-react-alberto
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+2. Accede al directorio del proyecto:
+```bash
+cd product-app-react-alberto
+```
+
+3. Instala las dependencias:
+```bash
+npm install
+```
+
+4. Antes de ejecutar la aplicación, renombra el archivo `.env.example` a `.env` y asegúrate de configurar la URL de la API en la variable correspondiente. Por ejemplo:
+```bash
+VITE_API_URL=https://fakestoreapi.com
+```
+
+5. Inicia la aplicación en desarrollo:
+```bash
+npm run dev
+```
+
+## API Utilizada
+[https://fakestoreapi.com](https://fakestoreapi.com)
+
+## Tecnologías y Librerías Utilizadas
+
+- **React + Vite:**
+- **Zustand:**
+- **React Router Dom:**
+- **React Hook Form:**
+- **Tailwind CSS:**
+- **Vitest + React Testing Library:**
+
+## Decisiones Técnicas
+
+- **Zustand** fue elegido por su simplicidad frente a Redux y por mantener el store desacoplado de los componentes.
+- **Hook personalizados** permiten encapsular lógica derivada del estado y mejorar la reutilización de código.
+- **División clara de responsabilidades:** La lógica de negocio se encuentra separada de la presentación (hooks vs. componentes).
+
+## Demo en Línea
+[https://products-alberto.vercel.app/](https://products-alberto.vercel.app/)
