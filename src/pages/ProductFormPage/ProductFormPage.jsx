@@ -1,6 +1,7 @@
 import {useProductFormController} from '../../hooks';
 import {
   ActionButton,
+  BackLink,
   FormInput,
   FormTextarea,
   ProductDetailSkeleton,
@@ -25,9 +26,12 @@ export default function ProductFormPage() {
 
   return (
     <div className="max-w-xl mx-auto bg-white p-6 rounded shadow">
-      <h1 className="text-xl font-semibold mb-6 text-gray-900">
+    <div className="flex items-center gap-4 mb-6">
+      <BackLink />
+      <h1 className="text-xl font-semibold text-gray-900">
         {isEdit ? STRINGS.FORM_TITLES.EDIT_PRODUCT : STRINGS.FORM_TITLES.CREATE_PRODUCT}
       </h1>
+    </div>
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
         <FormInput
           label={STRINGS.FORM_LABELS.TITLE}
@@ -40,6 +44,7 @@ export default function ProductFormPage() {
           label={STRINGS.FORM_LABELS.PRICE}
           name="price"
           type="number"
+          step="any"
           register={register}
           validation={{
             required: STRINGS.FORM_VALIDATIONS.REQUIRED,
