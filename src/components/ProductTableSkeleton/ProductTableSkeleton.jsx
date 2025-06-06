@@ -8,18 +8,23 @@ export default function ProductTableSkeleton() {
           <div>{STRINGS.TABLE_HEADERS.TITLE}</div>
           <div>{STRINGS.TABLE_HEADERS.PRICE}</div>
           <div>{STRINGS.TABLE_HEADERS.CATEGORY}</div>
-          <div>{STRINGS.TABLE_HEADERS.IMAGE}</div>
-          <div>{STRINGS.TABLE_HEADERS.ACTIONS}</div>
+          <div className="text-center">{STRINGS.TABLE_HEADERS.IMAGE}</div>
+          <div className="text-center">{STRINGS.TABLE_HEADERS.ACTIONS}</div>
         </div>
       </div>
       <div className="divide-y divide-gray-100">
         {[...Array(5)].map((_, idx) => (
-          <div key={idx} className="grid grid-cols-5 gap-4 p-4 animate-pulse">
+          <div
+            key={idx}
+            className="grid grid-cols-5 gap-4 p-4 items-center text-sm"
+          >
             <div className="h-4 bg-gray-200 rounded col-span-1" />
             <div className="h-4 bg-gray-200 rounded col-span-1" />
             <div className="h-4 bg-gray-200 rounded col-span-1" />
-            <div className="h-10 w-10 bg-gray-200 rounded-full" />
-            <div className="flex space-x-2">
+            <div className="flex justify-center items-center">
+              <div className="h-10 w-10 bg-gray-200 rounded-full" />
+            </div>
+            <div className="flex justify-center items-center space-x-2">
               <div className="h-4 w-10 bg-gray-200 rounded" />
               <div className="h-4 w-10 bg-gray-200 rounded" />
               <div className="h-4 w-10 bg-gray-200 rounded" />
